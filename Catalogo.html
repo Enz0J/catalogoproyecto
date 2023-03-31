@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html 1ang="es">
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>WinerGameShop</title>
+    
+</head>
+<body>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/933677776">
+        <img id="whatsapp" src="images/WhatsApp_icon.png.webp">
+    </a>
+    <!-- Encabezado -->
+    <header>
+        <h1>WinerGameShop</h1>
+        <h2>Seguridad, calidad y garantìa</h2>
+        <p>Venta de productos - Catalago de consolas</p>
+    </header>
+    <!--Barra de navegacion -->
+    <nav> <!--Navigatio-->>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="about.html">about</a></li>
+
+
+        </ul>
+    </nav>
+    <!--Menu de opciones-->
+    <p>
+        <!-- Registrar usuario -->
+        <a class="btn btn-success btn-lg" href="registroCuenta.html">Registrar usuario</a>
+        
+        <!-- Ver carrito de compra -->
+        <a class="btn btn-success btn-lg" onclick="actualizarLista()" href="#" data-bs-toggle="modal" data-bs-target="#carritoCompra">
+            Ir al carrito
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+        </a>
+
+        <!-- Modal carrito de compra-->
+        <div class="modal fade" id="carritoCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title fs-5" id="exampleModalLabel">Carrito de compra</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="listaCarrito" class="modal-body">
+                        El carrito está vacio.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Realizar la compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p> 
+
+    <!--producto-->
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>PlayStation5</h3>
+            <img src="productos imagenes/playstation_5.jpg" class="card-img-top" alt="PlayStation5">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2500.00 <span class="precioDescuento">- 50%</span></p>
+              <p class="card-text precioFinal">S/1450.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>Xbox SeriesX</h3>
+            <img src="productos imagenes/D_NQ_NP_963862-MLA45041918050_032021-O.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+              <p class="card-text precioFinal">S/1050.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <h3>PlayStation4</h3>
+              <img src="productos imagenes/play4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+                <p class="card-text precioFinal">S/1050.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <h3>PlayStation3</h3>
+              <img src="productos imagenes/play3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+                <p class="card-text precioFinal">S/1050.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>PlayStation2</h3>
+            <img src="productos imagenes/play2.jpg" class="card-img-top" alt="PlayStation5" width="100px">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2500.00 - 50%</p>
+              <p class="card-text precioFinal">S/1450.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>PsVita</h3>
+            <img src="productos imagenes/psvita.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+              <p class="card-text precioFinal">S/1050.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <h3>PSP</h3>
+              <img src="productos imagenes/psp.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+                <p class="card-text precioFinal">S/1050.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <h3>NintendoSwitch</h3>
+              <img src="productos imagenes/nintendoSS.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+                <p class="card-text precioFinal">S/1050.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>Nintendo3ds</h3>
+            <img src="productos imagenes/nintendo3ds.jpg" class="card-img-top" alt="PlayStation5" width="100px">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2500.00 - 50%</p>
+              <p class="card-text precioFinal">S/1450.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <h3>Nintendo2ds</h3>
+            <img src="productos imagenes/nintendooo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+              <p class="card-text precioFinal">S/1050.00</p>
+              <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+              <h3>Xbox one</h3>
+              <img src="productos imagenes/xboxone.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/2100.00 - 50%</p>
+                <p class="card-text precioFinal">S/1030.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+              <h3>Xbox360</h3>
+              <img src="productos imagenes/xbox360.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text precioOriginal">S/1100.00 - 10%</p>
+                <p class="card-text precioFinal">S/450.00</p>
+                <a class="btn btn-primary" href="#" onclick="addCart(this)"><span>🛒</span> Agregar a carrito</a>
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- Pie de página -->
+<div id="Pie">
+    <p>
+        Contenido del sitio con los derechos reservados<br>
+        Producciones EnzitoWiner<br>
+        2023 — Lima Perú
+    </p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <img class="mx-auto d-block" src="images/modal-ofertas.webp">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.js"></script>
+
+<script>
+
+    // Crear una cookie
+    var ObjetosSeleccionados = [];
+
+    // Función para el modal de promoción
+    function primeraFuncion() {
+        const modalEntrada = new bootstrap.Modal("#modalEntrada");
+        modalEntrada.show();
+    }
+
+    // Función para los botones añadir carrito
+    function addCart(objeto){
+        // Obtener el elemento donde se encuetra
+        var contenedor = objeto.parentElement.parentElement;
+        // Datos del producto
+        var nombre = contenedor.getElementsByTagName("h3")[0];
+        var precio = contenedor.getElementsByTagName("p")[0];
+        var precioFinal = contenedor.getElementsByTagName("p")[1];
+        // Crear objeto
+        var producto = {
+            "nombre" : nombre.innerText,
+            "precio" : precio.innerText,
+            "precioFinal" : precioFinal.innerText
+        }
+        // Añadir al array de objetos
+        ObjetosSeleccionados.push(producto);
+    }
+
+    // Función actualizar lista
+    function actualizarLista(){
+        var lista = document.getElementById("listaCarrito");
+        // Crear el HTML
+        var texto = "";
+        ObjetosSeleccionados.forEach(element => {
+            texto = texto + "<div class='productoLista'>";
+            texto = texto + "<p>"+element.nombre+"</p>";
+            texto = texto + "<p>"+element.precio+"</p>";
+            texto = texto + "<p>"+element.precioFinal+"</p>";
+            texto = texto + "</div>";
+        });
+        lista.innerHTML = texto;
+    }
+</script>
+</body>
